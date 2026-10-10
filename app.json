@@ -27,9 +27,12 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": ["expo-font"],
+    "plugins": [],
     "extra": {
-      "eas": { "projectId": "00000000-0000-0000-0000-000000000000" }
-    }
+      "eas": {
+        "projectId": "6ab5ff65-6935-4bc2-98ef-6e892e3ccae0"
+      }
+    },
+    "owner": "tobi.js"
   }
 }
