@@ -207,9 +207,9 @@ export function PlaygroundScreen() {
     <SafeAreaView style={styles.safe} edges={['top']}>
       <ScrollView style={styles.root} contentContainerStyle={{ paddingBottom: 28 }} showsVerticalScrollIndicator={false} keyboardShouldPersistTaps="handled">
         <View style={styles.head}>
-          <Text style={styles.kicker}>YAEGI · OFFLINE · GO ONLY</Text>
+          <Text style={styles.kicker}>OFFLINE · GO ONLY</Text>
           <Text style={styles.title}>Forge</Text>
-          <Text style={styles.sub}>Pure Go editor — multi-file, offline yaegi. Every file is .go. No JS, no hybrid.</Text>
+          <Text style={styles.sub}>Pure Go editor. Every file is .go — write, run, and see output right here.</Text>
         </View>
 
         <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.fileTabs}>
@@ -260,7 +260,7 @@ export function PlaygroundScreen() {
 
         <View style={styles.note}>
           <Text style={styles.noteTitle}>Offline · Go-only</Text>
-          <Text style={styles.noteText}>Yaegi interprets fmt, strings, json, net/http stubs, goroutines, generics (partial). No cgo/unsafe/asm. Files persist offline via AsyncStorage — no network after onboarding. Fmt = gofmt-lite (trim, brace check, import fix).</Text>
+          <Text style={styles.noteText}>Files stay on your device and keep working without internet after setup. Use Fmt to tidy your code and Run to see output below.</Text>
         </View>
       </ScrollView>
 

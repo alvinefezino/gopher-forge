@@ -45,14 +45,14 @@ export function PackagesScreen() {
         <View style={styles.head}>
           <Text style={styles.kicker}>OFFLINE CACHE</Text>
           <Text style={styles.title}>Packages</Text>
-          <Text style={styles.sub}>Pick what to cache on onboarding. Everything here works offline after download. Stored in app sandbox.</Text>
+          <Text style={styles.sub}>Pick what to keep ready offline. Everything works without internet after download.</Text>
           <View style={styles.cacheCard}>
             <View style={styles.cacheRow}>
-              <Text style={styles.cacheLabel}>{installed.length} packages cached</Text>
+              <Text style={styles.cacheLabel}>{installed.length} packages ready</Text>
               <Text style={styles.cacheSize}>~ {(installed.length * 0.6).toFixed(1)} MB</Text>
             </View>
             <View style={styles.track}><View style={[styles.fill, { width: `${Math.min(100, installed.length * 5)}%` }]} /></View>
-            <Text style={styles.cacheHint}>Cache lives at FileSystem/documentDirectory/go/pkg/mod. Clear from Settings anytime.</Text>
+            <Text style={styles.cacheHint}>Saved on your device. You can clear or add more anytime.</Text>
           </View>
         </View>
 

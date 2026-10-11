@@ -34,13 +34,13 @@ export function OnboardingScreen({ navigation }: any) {
           <View style={styles.logoWrap}>
             <Text style={styles.logoGlyph}>{'◈'}</Text>
           </View>
-          <Text style={styles.kicker}>OFFLINE-FIRST · POWERED BY YAEGI</Text>
+          <Text style={styles.kicker}>OFFLINE-FIRST · GO ONLY</Text>
           <Text style={styles.title}>Code Go{'\n'}anywhere.</Text>
-          <Text style={styles.sub}>Gopher Forge is a full offline playground. Download packages once on onboarding, then build, run, and learn with zero network.</Text>
+          <Text style={styles.sub}>Gopher Forge is your Go playground. Pick your packages once, then build, run, and learn anywhere — no internet needed after setup.</Text>
           <View style={styles.bullets}>
-            <View style={styles.bullet}><View style={styles.bulletDot} /><Text style={styles.bulletText}>Monaco-grade editor with tabs, search, and Go syntax</Text></View>
-            <View style={styles.bullet}><View style={styles.bulletDot} /><Text style={styles.bulletText}>Yaegi interpreter — instant Run without a backend</Text></View>
-            <View style={styles.bullet}><View style={styles.bulletDot} /><Text style={styles.bulletText}>15 tracks · 54 lessons · progress stays on-device</Text></View>
+            <View style={styles.bullet}><View style={styles.bulletDot} /><Text style={styles.bulletText}>Editor with tabs, search, and Go highlighting</Text></View>
+            <View style={styles.bullet}><View style={styles.bulletDot} /><Text style={styles.bulletText}>Tap Run to see output instantly on your device</Text></View>
+            <View style={styles.bullet}><View style={styles.bulletDot} /><Text style={styles.bulletText}>15 tracks · 54 lessons · progress stays on your phone</Text></View>
           </View>
           <AppButton label="Continue" onPress={() => setStep(1)} style={{ marginTop: 20 }} />
           <Text style={styles.foot}>Works fully offline after you cache packages.</Text>
@@ -55,7 +55,7 @@ export function OnboardingScreen({ navigation }: any) {
         <ScrollView style={styles.root} contentContainerStyle={{ paddingBottom: 24 }} showsVerticalScrollIndicator={false}>
           <Text style={styles.kicker2}>STEP 2 OF 3</Text>
           <Text style={styles.h2}>Cache your packages</Text>
-          <Text style={styles.hint}>Select packages to download now. You can add or remove anytime from the Packages tab. Cached at FileSystem/documentDirectory/go/pkg/mod.</Text>
+          <Text style={styles.hint}>Pick the packages you want ready offline. You can add or remove them anytime from the Packages tab.</Text>
 
           <View style={styles.selectAllRow}>
             <Pressable onPress={() => setSelected(popularPackages.map(p => p.id))} style={styles.selectBtn}><Text style={styles.selectText}>Select all</Text></Pressable>
@@ -96,7 +96,7 @@ export function OnboardingScreen({ navigation }: any) {
       <View style={styles.hero}>
         <Text style={styles.kicker}>STEP 3 OF 3</Text>
         <Text style={styles.titleSmall}>Caching {selected.length} packages</Text>
-        <Text style={styles.sub}>Downloading from proxy.golang.org and storing to app sandbox. This is simulated offline storage — real fetch wired via FileSystem + proxy API when you go online.</Text>
+        <Text style={styles.sub}>Getting your packages ready for offline use. This saves them on your device so lessons work without internet.</Text>
 
         <View style={styles.progressCard}>
           <View style={styles.progressHead}>
@@ -104,7 +104,7 @@ export function OnboardingScreen({ navigation }: any) {
             <Text style={styles.progressPct}>{progress}%</Text>
           </View>
           <View style={styles.track}><View style={[styles.fill, { width: `${progress}%` }]} /></View>
-          <Text style={styles.progressHint}>{downloading ? 'Writing to go/pkg/mod...' : 'Tap Download to store packages for offline use.'}</Text>
+          <Text style={styles.progressHint}>{downloading ? 'Saving to your device...' : 'Tap Download to save packages for offline use.'}</Text>
         </View>
 
         {!downloading ? (

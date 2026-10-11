@@ -31,7 +31,7 @@ export function HomeScreen({ navigation }: any) {
           <View style={{ flex: 1 }}>
             <Text style={styles.kicker}>GOPHER FORGE</Text>
             <Text style={styles.title}>Learn Go.{'\n'}Forge code.</Text>
-            <Text style={styles.sub}>15 tracks, 54 lessons. Run Go offline with yaegi. Pack your imports once, code anywhere.</Text>
+            <Text style={styles.sub}>15 tracks, 54 lessons. Code anywhere, even offline.</Text>
           </View>
           <View style={styles.statCard}>
             <Text style={styles.statNum}>{doneLessons}/{totalLessons}</Text>
