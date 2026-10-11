@@ -28,3 +28,19 @@ export async function markLessonDone(moduleId: string, lessonId: string) {
   p[moduleId] = arr;
   await AsyncStorage.setItem('gopher_progress', JSON.stringify(p));
 }
+export type ForgeFile = { id: string; name: string; code: string };
+const FORGE_FILES_KEY = 'gopher_forge_files_v1';
+const FORGE_ACTIVE_KEY = 'gopher_forge_active_v1';
+export async function getForgeFiles(): Promise<ForgeFile[] | null> {
+  const v = await AsyncStorage.getItem(FORGE_FILES_KEY);
+  return v ? JSON.parse(v) : null;
+}
+export async function saveForgeFiles(files: ForgeFile[]) {
+  await AsyncStorage.setItem(FORGE_FILES_KEY, JSON.stringify(files));
+}
+export async function getForgeActiveId(): Promise<string | null> {
+  return AsyncStorage.getItem(FORGE_ACTIVE_KEY);
+}
+export async function saveForgeActiveId(id: string) {
+  await AsyncStorage.setItem(FORGE_ACTIVE_KEY, id);
+}
